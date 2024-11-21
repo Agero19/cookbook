@@ -1,4 +1,8 @@
 // ## Utilities
+html {
+  font-size: 16px;
+}
+
 .container {
   max-width: 1280px;
   width: 100%;
@@ -18,7 +22,8 @@
 
 .main-logo {
   max-width: 110px;
-  width: 100%;
+  flex-basis: 110px;
+  display: block;
 
   img {
     width: 100%;
@@ -37,7 +42,6 @@
       font-family: monospace;
       color: black;
       text-decoration: none;
-      font-size: 16px;
       padding: 8px;
 
       &:hover {
@@ -77,3 +81,58 @@
 }
 
 // ## Footer
+
+.main-footer {
+  padding-top: 120px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+
+  .main-nav {
+    .nav-item {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    li:last-child {
+      padding-right: 0;
+      a {
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.info p {
+  margin-bottom: 0;
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(#000, 0.1);
+  padding-top: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+  .social-wrap {
+    display: inline-block;
+    transform: translateX(-100%);
+  }
+}
+
+.copyright {
+  // is size for p , div or class>p
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+  //family Exodus Sans
+  .highlighted {
+    color: #ff7967;
+  }
+}
