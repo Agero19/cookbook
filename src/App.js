@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import insta from "./insta.svg";
+import recipe from "./recipe-photo.svg";
 import "./normalize.css";
 import "./App.scss";
 function App() {
@@ -66,6 +67,44 @@ function App() {
           </div>
         </div>
       </header>
+      <div className="recipe">
+        <div className="image-wrapper">
+          {/* image of the dish */}
+          <img
+            src={recipe}
+            alt="dish"
+          />
+
+          {/* button to like the recipe */}
+          <button className="liked">
+            {/* heart shaped icon on the button */}
+            <img
+              src={insta}
+              alt="heart"
+            />
+          </button>
+        </div>
+
+        <p className="recipe-name">Fresh and Healthy Mixed Mayonnaise Salad</p>
+
+        <ul className="categories">
+          <li>
+            <img
+              src={insta}
+              alt="time"
+            />
+            30 Minutes
+          </li>
+
+          <li>
+            <img
+              src={insta}
+              alt="type"
+            />
+            Healthy
+          </li>
+        </ul>
+      </div>
       <footer className="main-footer">
         <div className="container">
           {/* Top part of footer */}
