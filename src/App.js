@@ -1,8 +1,18 @@
-import logo from "./logo.svg";
-import insta from "./insta.svg";
-import recipe from "./recipe-photo.svg";
-import "./normalize.css";
 import "./App.scss";
+import insta from "./insta.svg";
+import logo from "./logo.svg";
+import "./normalize.css";
+import recipe from "./recipe-photo.svg";
+
+import "@fontsource-variable/inter"; // Defaults to wght axis
+import "@fontsource-variable/inter/wght-italic.css"; // Specify axis and style
+import "@fontsource-variable/inter/wght.css"; // Specify axis
+
+import React from "react";
+import ItemCard from "./components/ItemCard";
+import MainNav from "./components/MainNav";
+import SocialButtons from "./components/SocialButtons";
+
 function App() {
   return (
     <div className="App">
@@ -20,91 +30,32 @@ function App() {
             />
           </a>
 
-          {/* Navbar values  */}
-          <ul className="main-nav">
-            <li className="nav-item">
-              <a href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a href="/">Recipes</a>
-            </li>
-            <li className="nav-item">
-              <a href="/">Blog</a>
-            </li>
-            <li className="nav-item">
-              <a href="/">Contact</a>
-            </li>
-            <li className="nav-item">
-              <a href="/">About us</a>
-            </li>
-          </ul>
+          <MainNav />
 
-          {/* Social medias */}
-          <div className="social-links">
-            <button className="social-links-button">
-              <img
-                src={insta}
-                className="social-logo"
-                alt="logo"
-              />
-            </button>
-
-            <button className="social-links-button">
-              <img
-                src={insta}
-                className="social-logo"
-                alt="logo"
-              />
-            </button>
-
-            <button className="social-links-button">
-              <img
-                src={insta}
-                className="social-logo"
-                alt="logo"
-              />
-            </button>
-          </div>
+          <SocialButtons />
         </div>
       </header>
-      <div className="recipe">
-        <div className="image-wrapper">
-          {/* image of the dish */}
-          <img
-            src={recipe}
-            alt="dish"
-          />
 
-          {/* button to like the recipe */}
-          <button className="liked">
-            {/* heart shaped icon on the button */}
-            <img
-              src={insta}
-              alt="heart"
-            />
-          </button>
-        </div>
-
-        <p className="recipe-name">Fresh and Healthy Mixed Mayonnaise Salad</p>
-
-        <ul className="categories">
-          <li>
-            <img
-              src={insta}
-              alt="time"
-            />
-            30 Minutes
-          </li>
-
-          <li>
-            <img
-              src={insta}
-              alt="type"
-            />
-            Healthy
-          </li>
-        </ul>
+    <div className="container">
+      <div className="row">
+        
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        
       </div>
+    </div>
+      
+
+      
+
+
       <footer className="main-footer">
         <div className="container">
           {/* Top part of footer */}
@@ -127,20 +78,7 @@ function App() {
             </div>
             {/* Page footer Navigation  */}
 
-            <ul className="main-nav">
-              <li className="nav-item">
-                <a href="/">Recipes</a>
-              </li>
-              <li className="nav-item">
-                <a href="/">Blog</a>
-              </li>
-              <li className="nav-item">
-                <a href="/">Contact</a>
-              </li>
-              <li className="nav-item">
-                <a href="/">About us</a>
-              </li>
-            </ul>
+            <MainNav />
           </div>
 
           {/* Lower part of footer */}
@@ -153,29 +91,7 @@ function App() {
             </div>
 
             <div className="social-wrap">
-              <div className="social-links">
-                <button className="social-links-button">
-                  <img
-                    src={insta}
-                    className="social-logo"
-                    alt="logo"
-                  />
-                </button>
-                <button className="social-links-button">
-                  <img
-                    src={insta}
-                    className="social-logo"
-                    alt="logo"
-                  />
-                </button>
-                <button className="social-links-button">
-                  <img
-                    src={insta}
-                    className="social-logo"
-                    alt="logo"
-                  />
-                </button>
-              </div>
+              <SocialButtons />
             </div>
           </div>
         </div>
