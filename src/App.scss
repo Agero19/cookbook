@@ -141,38 +141,71 @@ html {
 .recipe {
   background-color: #dbe2e5;
   max-width: 400px;
-  min-height: 434px;
   width: 100%;
-  height: 100%;
-  border-radius: 10%;
+  min-height: 434px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
-}
 
-.image-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: end;
-
-  button {
-    position: absolute;
-    border-radius: 50%;
-    border: none;
-    max-height: 48px;
-    max-width: 48px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-right: 20px;
+  .image-wrapper {
+    position: relative;
 
     img {
-      max-width: 24px;
-      max-height: 24px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    button.liked {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      border-radius: 50%;
+      border: none;
+      width: 48px;
+      height: 48px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
-  img {
-    margin: auto;
-    border-radius: 10%;
-    padding: 16px;
+  .recipe-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0;
+    padding: 24px;
+    padding-bottom: 0;
+  }
+
+  .categories {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      padding: 24px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 }
