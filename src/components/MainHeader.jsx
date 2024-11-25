@@ -1,9 +1,8 @@
 import React from "react";
 import MainNav from "./MainNav";
 import SocialButtons from "./SocialButtons";
-import logo from "../logo.svg";
 
-function MainHeader() {
+const MainHeader = ({ links }) => {
   return (
     <header className="main-header">
       <div className="container">
@@ -13,17 +12,17 @@ function MainHeader() {
           className="main-logo"
         >
           <img
-            src={logo}
+            src="/images/logo.svg"
             alt="logo"
           />
         </a>
 
-        <MainNav />
+        <MainNav links={links} />
 
         <SocialButtons />
       </div>
     </header>
   );
-}
+};
 
 export default MainHeader;

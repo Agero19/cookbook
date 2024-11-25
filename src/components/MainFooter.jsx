@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "../logo.svg";
 import SocialButtons from "./SocialButtons";
 import MainNav from "./MainNav";
 
-function MainFooter() {
+const MainFooter = ({ links }) => {
   return (
     <footer className="main-footer">
       <div className="container">
@@ -18,7 +17,7 @@ function MainFooter() {
               className="main-logo"
             >
               <img
-                src={logo}
+                src="/images/logo.svg"
                 alt="logo"
               />
             </a>
@@ -27,7 +26,7 @@ function MainFooter() {
           </div>
           {/* Page footer Navigation  */}
 
-          <MainNav />
+          <MainNav links={links} />
         </div>
 
         {/* Lower part of footer */}
@@ -46,6 +45,6 @@ function MainFooter() {
       </div>
     </footer>
   );
-}
+};
 
 export default MainFooter;
