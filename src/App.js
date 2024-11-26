@@ -9,6 +9,8 @@ import React from "react";
 import ItemCard from "./components/ItemCard";
 import MainHeader from "./components/MainHeader";
 import MainFooter from "./components/MainFooter";
+import Heading2 from "./components/Heading2";
+import CategoryTile from "./components/CategoryTile";
 
 function App() {
   const dishes = [
@@ -59,6 +61,39 @@ function App() {
     },
   ];
 
+  const categories = [
+    {
+      name: "Breakfast",
+      image: "/images/breakfast-cat.svg",
+      color: "#708246",
+    },
+    {
+      name: "Vegan",
+      image: "/images/vegan-cat.svg",
+      color: "#6CC63F",
+    },
+    {
+      name: "Meat",
+      image: "/images/meat-cat.svg",
+      color: "#CC261B",
+    },
+    {
+      name: "Dessert",
+      image: "/images/dessert-cat.svg",
+      color: "#F09E00",
+    },
+    {
+      name: "Lunch",
+      image: "/images/lunch-cat.svg",
+      color: "#000000",
+    },
+    {
+      name: "Chocolate",
+      image: "/images/chocolate-cat.svg",
+      color: "#000000",
+    },
+  ];
+
   const navLinks = [
     { label: "Home", href: "/", inFooter: false },
     { label: "Recipes", href: "/recipes", inFooter: true },
@@ -75,7 +110,29 @@ function App() {
       {/* App header  */}
       <MainHeader links={headerLinks} />
 
+      <div
+        className="container"
+        style={{ margin: "120px auto" }}
+      >
+        <div className="row">
+          {categories.map(({ name, image, color }, index) => (
+            <div className="col col-2">
+              <CategoryTile
+                key={index}
+                name={name}
+                image={image}
+                color={color}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="container">
+        <Heading2
+          title="Simple and tasty recipes"
+          text="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+        />
         <div className="row">
           {dishes.map(({ name, image, title }, index) => (
             <ItemCard
