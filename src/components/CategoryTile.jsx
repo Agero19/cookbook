@@ -1,6 +1,6 @@
 import React from "react";
 
-const Category = ({ name, image, color }) => {
+const Category = ({ name, image, color, shadow }) => {
   const hexToRgb = (hex) => {
     const bigint = parseInt(hex.replace("#", ""), 16);
     const r = (bigint >> 16) & 255;
@@ -30,7 +30,7 @@ const Category = ({ name, image, color }) => {
 
         <div className="shadow-wrapper">
           <img
-            src="/images/shadow-cat.svg"
+            src={shadow}
             alt="shadow"
           />
         </div>

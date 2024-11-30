@@ -66,31 +66,37 @@ function App() {
       name: "Breakfast",
       image: "/images/breakfast-cat.svg",
       color: "#708246",
+      shadow: "/images/breakfast-shadow.svg",
     },
     {
       name: "Vegan",
       image: "/images/vegan-cat.svg",
       color: "#6CC63F",
+      shadow: "/images/vegan-shadow.svg",
     },
     {
       name: "Meat",
       image: "/images/meat-cat.svg",
       color: "#CC261B",
+      shadow: "/images/meat-shadow.svg",
     },
     {
       name: "Dessert",
       image: "/images/dessert-cat.svg",
       color: "#F09E00",
+      shadow: "/images/dessert-shadow.svg",
     },
     {
       name: "Lunch",
       image: "/images/lunch-cat.svg",
       color: "#000000",
+      shadow: "/images/lunch-shadow.svg",
     },
     {
       name: "Chocolate",
       image: "/images/chocolate-cat.svg",
       color: "#000000",
+      shadow: "/images/chocolate-shadow.svg",
     },
   ];
 
@@ -115,13 +121,14 @@ function App() {
         style={{ margin: "120px auto" }}
       >
         <div className="row">
-          {categories.map(({ name, image, color }, index) => (
+          {categories.map(({ name, image, color, shadow }, index) => (
             <div className="col col-2">
               <CategoryTile
                 key={index}
                 name={name}
                 image={image}
                 color={color}
+                shadow={shadow}
               />
             </div>
           ))}
